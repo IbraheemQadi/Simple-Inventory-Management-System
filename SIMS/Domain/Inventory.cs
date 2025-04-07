@@ -76,5 +76,18 @@ namespace SIMS.Domain
             Console.WriteLine("Product deleted.");
         }
 
+        public void SearchProduct(string name)
+        {
+            var product = products.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            if (product == null)
+            {
+                Console.WriteLine("Product not found.");
+            }
+            else
+            {
+                Console.WriteLine(product);
+            }
+        }
+
     }
 }
