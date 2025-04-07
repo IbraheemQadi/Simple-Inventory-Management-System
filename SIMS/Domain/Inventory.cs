@@ -9,5 +9,12 @@ namespace SIMS.Domain
     class Inventory
     {
         private List<Product> products = new List<Product>();
+
+        public void AddProduct(Product product)
+        {
+            products.Add(product);
+            Console.WriteLine("Product added successfully!");
+        }
+
     }
 }
