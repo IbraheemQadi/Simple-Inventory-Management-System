@@ -16,5 +16,19 @@ namespace SIMS.Domain
             Console.WriteLine("Product added successfully!");
         }
 
+        public void ViewAllProducts()
+        {
+            if (products.Count == 0)
+            {
+                Console.WriteLine("No products in inventory.");
+                return;
+            }
+
+            foreach (var product in products)
+            {
+                Console.WriteLine(product);
+            }
+        }
+
     }
 }
